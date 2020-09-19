@@ -1,4 +1,4 @@
-# Nomflix
+# Letflix
 
 Creating Movie Discovery App with React and ES6
 
