@@ -8,3 +8,11 @@ Creating Movie Discovery App with React and ES6
 - [ ] TV Shows
 - [ ] Search
 - [ ] Detail
+
+## API Verbs
+
+- [ ] Now playing (Movies)
+- [ ] Top Rated (TV, Movies)
+- [ ] Popular (TV, Movies)
+- [ ] Upcoming (TV, Movie)
+- [ ] Airing Today (TV)
