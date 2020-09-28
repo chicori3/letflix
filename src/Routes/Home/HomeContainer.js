@@ -28,7 +28,7 @@ export default class extends React.Component {
         popular,
       });
     } catch {
-      this.setState({ error: "영화를 찾을 수 없습니다. :(" });
+      this.setState({ error: "검색 결과가 없습니다. :(" });
     } finally {
       this.setState({
         loading: false,
