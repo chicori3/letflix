@@ -1,6 +1,6 @@
 import React from "react";
+import { tvApi } from "../../api";
 import TVPresenter from "./TVPresenter";
-import { tvApi } from "api";
 
 export default class extends React.Component {
   state = {
@@ -24,7 +24,7 @@ export default class extends React.Component {
       } = await tvApi.airingToday();
       this.setState({ topRated, popular, airingToday });
     } catch {
-      this.setState({ error: "검색 결과가 없습니다. :(" });
+      this.setState({ error: "ERROR! :(" });
     } finally {
       this.setState({ loading: false });
     }

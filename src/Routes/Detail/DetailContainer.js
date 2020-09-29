@@ -1,6 +1,6 @@
 import React from "react";
+import { moviesApi, tvApi } from "../../api";
 import DetailPresenter from "./DetailPresenter";
-import { moviesApi, tvApi } from "api";
 
 export default class extends React.Component {
   constructor(props) {
@@ -32,14 +32,14 @@ export default class extends React.Component {
     try {
       if (isMovie) {
         const request = await moviesApi.movieDetail(parsedId);
-        result = request.data;
+        result = request;
       } else {
         const request = await tvApi.showDetail(parsedId);
-        result = request.data;
+        result = request;
       }
       console.log(result);
     } catch {
-      this.setState({ error: "검색 결과가 없습니다. :(" });
+      this.setState({ error: "ERROR! :(" });
     } finally {
       this.setState({ loading: false, result });
     }
@@ -47,7 +47,6 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    console.log(this.state);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }

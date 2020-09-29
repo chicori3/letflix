@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const Header = styled.header`
   font-weight: bold;
-  color: #333;
+  color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,9 +12,9 @@ const Header = styled.header`
   height: 50px;
   display: flex;
   align-items: center;
-  background-color: rgba(243, 243, 243, 1);
+  background-color: #c0392b;
   z-index: 10;
-  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2 );
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
 `;
 
 const List = styled.ul`

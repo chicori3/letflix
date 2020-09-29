@@ -1,6 +1,6 @@
 import React from "react";
+import { moviesApi, tvApi } from "../../api";
 import SearchPresenter from "./SearchPresenter";
-import { moviesApi, tvApi } from "api";
 
 export default class extends React.Component {
   state = {
@@ -10,7 +10,9 @@ export default class extends React.Component {
     error: null,
     loading: false,
   };
-
+  componentDidMount() {
+    this.handleSubmit();
+  }
   handleSubmit = () => {
     const { searchTerm } = this.state;
     if (searchTerm !== "") {
@@ -30,7 +32,7 @@ export default class extends React.Component {
       } = await tvApi.search(searchTerm);
       this.setState({ movieResults, tvResults });
     } catch {
-      this.setState({ error: "검색 결과가 없습니다. :(" });
+      this.setState({ error: "ERROR! :(" });
     } finally {
       this.setState({ loading: false });
     }
