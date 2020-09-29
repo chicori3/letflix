@@ -1,7 +1,6 @@
 import React from "react";
 import SearchPresenter from "./SearchPresenter";
-import { moviesApi } from "api";
-import { tvApi } from "api";
+import { moviesApi, tvApi } from "api";
 
 export default class extends React.Component {
   state = {
