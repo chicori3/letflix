@@ -31,13 +31,10 @@ export default class extends React.Component {
     let result = null;
     try {
       if (isMovie) {
-        const request = await moviesApi.movieDetail(parsedId);
-        result = request;
+        ({ data: result } = await moviesApi.movieDetail(parsedId));
       } else {
-        const request = await tvApi.showDetail(parsedId);
-        result = request;
+        ({ data: result } = await tvApi.showDetail(parsedId));
       }
-      console.log(result);
     } catch {
       this.setState({ error: "ERROR! :(" });
     } finally {
@@ -47,6 +44,7 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
+    console.log(result);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }
