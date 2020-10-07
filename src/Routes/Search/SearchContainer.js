@@ -38,7 +38,7 @@ export default class extends React.Component {
       } = await tvApi.search(searchTerm);
       this.setState({ movieResults, tvResults });
     } catch {
-      this.setState({ error: "ERROR! :(" });
+      this.setState({ error: "결과를 찾을 수 없습니다. :(" });
     } finally {
       this.setState({ loading: false });
     }
