@@ -12,7 +12,7 @@ const Header = styled.header`
   height: 50px;
   display: flex;
   align-items: center;
-  background-color: #c0392b;
+  background-color: #141414;
   z-index: 10;
   box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.2);
 `;
@@ -26,7 +26,7 @@ const Item = styled.li`
   height: 50px;
   text-align: center;
   border-bottom: 5px solid
-    ${(props) => (props.current ? "#3498db" : "transparent")};
+    ${(props) => (props.current ? "rgba(241, 196, 15,1.0)" : "transparent")};
   transition: border-bottom 0.5s ease-in-out;
 `;
 
