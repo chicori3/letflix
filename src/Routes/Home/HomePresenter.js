@@ -16,7 +16,7 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
   ) : (
     <Container>
       {nowPlaying && nowPlaying.length > 0 && (
-        <Section title="Now Playing">
+        <Section title="현재상영작">
           {nowPlaying.map((movie) => (
             <Poster
               key={movie.id}
@@ -31,7 +31,7 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
         </Section>
       )}
       {upcoming && upcoming.length > 0 && (
-        <Section title="Upcoming Movies">
+        <Section title="개봉예정작">
           {upcoming.map((movie) => (
             <Poster
               key={movie.id}
@@ -46,7 +46,7 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
         </Section>
       )}
       {popular && popular.length > 0 && (
-        <Section title="Popular Movies">
+        <Section title="인기 영화">
           {popular.map((movie) => (
             <Poster
               key={movie.id}
