@@ -1,5 +1,5 @@
 import React from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
@@ -7,7 +7,7 @@ import Message from "Components/Message";
 import Poster from "Components/Poster";
 
 const Container = styled.div`
-  padding: 0 20px;
+  padding: 20px;
 `;
 
 const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
@@ -65,11 +65,11 @@ const HomePresenter = ({ nowPlaying, upcoming, popular, error, loading }) =>
   );
 
 HomePresenter.propTypes = {
-  nowPlaying: Proptypes.array,
-  upcoming: Proptypes.array,
-  popular: Proptypes.array,
-  error: Proptypes.string,
-  loading: Proptypes.bool.isRequired,
+  nowPlaying: PropTypes.array,
+  upcoming: PropTypes.array,
+  popular: PropTypes.array,
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default HomePresenter;

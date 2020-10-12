@@ -1,5 +1,5 @@
 import React from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
@@ -83,13 +83,13 @@ const SearchPresenter = ({
 );
 
 SearchPresenter.propTypes = {
-  movieResults: Proptypes.array,
-  tvResults: Proptypes.array,
-  error: Proptypes.string,
-  loading: Proptypes.bool.isRequired,
-  updateTerm: Proptypes.func.isRequired,
-  searchTerm: Proptypes.string,
-  handleSubmit: Proptypes.func.isRequired,
+  movieResults: PropTypes.array,
+  tvResults: PropTypes.array,
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
+  updateTerm: PropTypes.func.isRequired,
+  searchTerm: PropTypes.string,
+  handleSubmit: PropTypes.func.isRequired,
 };
 
 export default SearchPresenter;

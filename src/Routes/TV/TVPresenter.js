@@ -1,5 +1,5 @@
 import React from "react";
-import Proptypes from "prop-types";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Section from "Components/Section";
 import Loader from "Components/Loader";
@@ -62,11 +62,11 @@ const TVPresenter = ({ topRated, popular, airingToday, error, loading }) =>
   );
 
 TVPresenter.propTypes = {
-  topRated: Proptypes.array,
-  popular: Proptypes.array,
-  airingToday: Proptypes.array,
-  error: Proptypes.string,
-  loading: Proptypes.bool.isRequired,
+  topRated: PropTypes.array,
+  popular: PropTypes.array,
+  airingToday: PropTypes.array,
+  error: PropTypes.string,
+  loading: PropTypes.bool.isRequired,
 };
 
 export default TVPresenter;
