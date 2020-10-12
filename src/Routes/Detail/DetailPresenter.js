@@ -38,6 +38,34 @@ const Cover = styled.div`
   background-position: center center;
   background-size: cover;
   border-radius: 5px;
+  margin-right: 10px;
+`;
+
+const Data = styled.div`
+  width: 70%;
+  margin-left: 10px;
+`;
+
+const Title = styled.h3`
+  font-size: 32px;
+  margin-bottom: 10px;
+`;
+
+const InfoContainer = styled.div`
+  margin: 20px 0;
+`;
+
+const Info = styled.span``;
+
+const Divider = styled.span`
+  margin: 0 10px;
+`;
+
+const Overview = styled.p`
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.5;
+  width: 60%;
 `;
 
 const DetailPresenter = ({ result, error, loading }) =>
@@ -56,6 +84,46 @@ const DetailPresenter = ({ result, error, loading }) =>
               : require("../../assets/noPosterSmall.png")
           }
         />
+        <Data>
+          <Title>
+            {result.original_title
+              ? result.original_title
+              : result.original_name}
+          </Title>
+          <InfoContainer>
+            <Info>
+              {result.release_date
+                ? result.release_date.substring(0, 4)
+                : result.first_air_date.substring(0, 4)}
+            </Info>
+            <Divider>•</Divider>
+            <Info>
+              {result.runtime ? result.runtime : result.episode_run_time}분
+            </Info>
+            <Divider>•</Divider>
+            <Info>
+              {result.genres &&
+                result.genres.map((genre, index) =>
+                  index === result.genres.length - 1
+                    ? genre.name
+                    : `${genre.name} / `
+                )}
+            </Info>
+            <Divider>•</Divider>
+            <Info>
+              {result.vote_average > 8.9
+                ? "⭐⭐⭐⭐⭐"
+                : result.vote_average > 6.9
+                ? "⭐⭐⭐⭐"
+                : result.vote_average > 4.9
+                ? "⭐⭐⭐"
+                : result.vote_average > 2.9
+                ? "⭐⭐"
+                : "⭐"}
+            </Info>
+          </InfoContainer>
+          <Overview>{result.overview}</Overview>
+        </Data>
       </Content>
     </Container>
   );
