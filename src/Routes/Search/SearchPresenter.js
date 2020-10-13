@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import Helmet from "react-helmet";
 import Loader from "Components/Loader";
 import Section from "Components/Section";
 import Message from "Components/Message";
@@ -30,6 +31,9 @@ const SearchPresenter = ({
   handleSubmit,
 }) => (
   <Container>
+    <Helmet>
+      <title>검색 | Letflix</title>
+    </Helmet>
     <Form onSubmit={handleSubmit}>
       <Input
         placeholder="검색"
