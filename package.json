@@ -28,7 +28,8 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://chicori3.github.io/letflix",
+  // "homepage": "https://chicori3.github.io/letflix",
+  "homepage": "https://blissful-poincare-24319e.netlify.app",
   "browserslist": {
     "production": [
       ">0.2%",
