@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/letflix/static/js/main.1a4f3317.chunk.js",
+    "main.js.map": "/letflix/static/js/main.1a4f3317.chunk.js.map",
+    "runtime-main.js": "/letflix/static/js/runtime-main.156c63d2.js",
+    "runtime-main.js.map": "/letflix/static/js/runtime-main.156c63d2.js.map",
+    "static/js/2.5965e92c.chunk.js": "/letflix/static/js/2.5965e92c.chunk.js",
+    "static/js/2.5965e92c.chunk.js.map": "/letflix/static/js/2.5965e92c.chunk.js.map",
+    "index.html": "/letflix/index.html",
+    "precache-manifest.f746015cd85b4a97d09f660b62aef611.js": "/letflix/precache-manifest.f746015cd85b4a97d09f660b62aef611.js",
+    "service-worker.js": "/letflix/service-worker.js",
+    "static/js/2.5965e92c.chunk.js.LICENSE.txt": "/letflix/static/js/2.5965e92c.chunk.js.LICENSE.txt",
+    "static/media/noPosterSmall.png": "/letflix/static/media/noPosterSmall.334a3daf.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.156c63d2.js",
+    "static/js/2.5965e92c.chunk.js",
+    "static/js/main.1a4f3317.chunk.js"
+  ]
+}
