@@ -1,6 +1,7 @@
 # Letflix
 
-Creating Movie Discovery App with React and ES6
+- 리액트와 ES6를 이용한 영화 정보 앱
+- [Letflix](https://letflix.netlify.app/#/) 바로가기
 
 ## Screens
 
@@ -22,6 +23,7 @@ Creating Movie Discovery App with React and ES6
 
 ## Challenges
 
+- [ ] Search Bar CSS
 - [ ] IMDB Link
 - [ ] More Tabs of Movies / TV Show (Youtube)
 - [ ] Collections Link
